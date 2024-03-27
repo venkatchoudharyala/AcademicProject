@@ -5,6 +5,7 @@ import os
 
 def main():
 	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
+	os.environ['JAVAHOME'] = 'usr/bin/java'
 	st.title("Abstract Page")
 	with st.spinner("Checking for necessary Dependencies"):
 		bl.Booting()
