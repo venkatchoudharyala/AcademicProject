@@ -15,7 +15,8 @@ def main():
 			flag += 1
 	if flag == 2:
 		st.success('Parser Files Found!', icon="✅")
-	
+
+	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
 	st.session_state['server'] = CoreNLPServer()
 	with st.spinner("Initializing CoreNLP Server!"):
 		st.success('Server Inintialized', icon="✅")
