@@ -1,7 +1,7 @@
 import pytesseract
 from PIL import Image
 from io import BytesIO
-import easyocr
+#import easyocr
 
 # Function to perform OCR with Tesseract
 def ocr_with_tesseract(image):
@@ -10,6 +10,7 @@ def ocr_with_tesseract(image):
 	return extracted_text
 
 # Function to perform OCR with EasyOCR
+'''
 def ocr_with_easyocr(image):
 	# Convert the image to bytes for easyocr
 	image_bytes = image.tobytes()
@@ -22,3 +23,4 @@ def ocr_with_easyocr(image):
 	extracted_text = [text[1] for text in result]
 	
 	return extracted_text
+'''
