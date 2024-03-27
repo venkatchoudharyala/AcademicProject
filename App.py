@@ -34,7 +34,7 @@ def main():
 			_ = cropped_img.thumbnail((580, 580))
 			st.image(cropped_img)
 			#if st.button("Extract"):
-			ExText = ocr.ocr_with_tesseract(cropped_img)
+			ExText = ocr.ocr_with_easyocr(cropped_img)
 			with st.form("OCR", clear_on_submit = True):
 				Question = st.text_area("Question", value = ExText)
 				col1, col2 = st.columns(2)
