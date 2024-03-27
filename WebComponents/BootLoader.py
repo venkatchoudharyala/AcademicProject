@@ -5,6 +5,7 @@ from nltk.parse.corenlp import CoreNLPServer
 import streamlit as st
 
 def Booting():
+	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
 	directory_path = "Parser"
 	
 	if os.path.exists(directory_path) and os.listdir(directory_path):
