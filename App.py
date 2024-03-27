@@ -4,6 +4,7 @@ from WebComponents import ArticleExtractor as ocr
 from streamlit_cropper import st_cropper
 from PIL import Image
 
+st.set_page_config(layout="wide")
 def main():
 	tab1, tab2 = st.tabs(['Manual', 'OCR'])
 	if 'Questions' not in st.session_state:
