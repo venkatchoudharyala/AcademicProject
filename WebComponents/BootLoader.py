@@ -6,7 +6,6 @@ import streamlit as st
 import nltk
 
 def Booting():
-	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
 	directory_path = "Parser/stanford-corenlp-4.5.6"
 	
 	if os.path.exists(directory_path) and os.listdir(directory_path):
@@ -44,6 +43,7 @@ def ParserDownload():
 			print("Failed to download file.")
 
 def Server():
+	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
 	st.session_state['server'] = CoreNLPServer()
 	with st.spinner("Initializing CoreNLP Server!"):
 		st.session_state['server'].start()
