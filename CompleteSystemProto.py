@@ -14,6 +14,7 @@ from nltk.parse.corenlp import CoreNLPServer
 from nltk.parse.corenlp import CoreNLPParser
 from nltk.corpus import stopwords
 from nltk.tree.tree import Tree
+import nltk
 
 import textacy
 from textacy import *
