@@ -10,8 +10,8 @@ def main():
 	if st.session_state["Flag"]:
 		bl.Booting()
 		st.session_state["Flag"] = False
-
-	if st.button("Upload Text"):
-		st.switch_page("pages/Extraction.py")
+	else:
+		if st.button("Upload Text"):
+			st.switch_page("pages/Extraction.py")
 if __name__ == "__main__":
 	main()
