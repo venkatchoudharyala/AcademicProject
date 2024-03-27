@@ -144,6 +144,7 @@ def Generate(Article):
   CompressedSentences = []
   server = CoreNLPServer()
   server.start()
+  print('0')
 
   for i in first_sentences_list:
     ParsedSentence = Parsing(i, server)
