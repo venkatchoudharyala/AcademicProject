@@ -8,7 +8,7 @@ def main():
 	nltk.download('punkt')
 	nltk.download('stopwords')
 	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
-	os.environ['JAVAHOME'] = 'usr/bin/java'
+	#os.environ['JAVAHOME'] = 'usr/bin/java'
 	st.title("Abstract Page")
 	with st.spinner("Checking for necessary Dependencies"):
 		bl.Booting()
@@ -22,9 +22,9 @@ def main():
 		st.success('Parser Files Found!', icon="✅")
 
 	st.session_state['server'] = CoreNLPServer()
-	#with st.spinner("Initializing CoreNLP Server!"):
-	st.session_state['server'].start()
-	st.success('Server Initialized', icon="✅")
+	with st.spinner("Initializing CoreNLP Server!"):
+		st.session_state['server'].start()
+		st.success('Server Initialized', icon="✅")
 
 	if st.button("Upload Text"):
 		st.switch_page("pages/Extraction.py")
