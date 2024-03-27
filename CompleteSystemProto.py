@@ -147,7 +147,6 @@ def Generate(Article):
 
   for i in first_sentences_list:
     ParsedSentence = Parsing(i, server)
-  print("1")
     for i in ParsedSentence:
       for j in i:
         lefts = find_leftmost_S(j)
@@ -158,6 +157,7 @@ def Generate(Article):
         break
     Labels = ['DT', 'TMP', 'SBAR']
     #, 'CC', 'VBZ, 'PRP'' IN',
+    print("1")
     for i in Labels:
       Temp = Pruning(LeftMostS, i)
       LeftMostS = Temp
