@@ -1,3 +1,4 @@
 streamlit-cropper
 pytesseract
 easyocr
+textacy
