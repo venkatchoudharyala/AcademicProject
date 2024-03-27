@@ -28,7 +28,7 @@ def main():
 	with tab2:
 		if "file_uploader_key" not in st.session_state:
 			st.session_state["file_uploader_key"] = 0
-		Image_File = st.file_uploader("Upload the Image", type=['png', 'jpg'], accept_multiple_files=True, key=st.session_state["file_uploader_key"],)
+		Image_File = st.file_uploader("Upload the Image", type=['png', 'jpg'], key=st.session_state["file_uploader_key"],)
 		if Image_File:
 			col1, col2 = st.columns(2)
 			with col1:
