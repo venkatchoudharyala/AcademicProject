@@ -55,7 +55,7 @@ def get_first_sentences(news_article):
     return first_sentences
 
 def Parsing(Sentence, server):
-  parser = CoreNLPParser(url=server.url)
+  parser = CoreNLPParser(url=st.session_state['server'].url)
   return next(parser.raw_parse(Sentence))
 
 def find_leftmost_S(tree):
@@ -142,9 +142,8 @@ def Generate(Article):
   first_sentences_list = get_first_sentences(cleaned_article)
 
   CompressedSentences = []
-  server = CoreNLPServer()
-  server.start()
-  print('0')
+  #server = CoreNLPServer()
+  #server.start()
 
   for i in first_sentences_list:
     ParsedSentence = Parsing(i, server)
@@ -169,7 +168,7 @@ def Generate(Article):
 
     sentence = ' '.join(word_list)
     CompressedSentences.append(sentence)
-  server.stop()
+  #server.stop()
 
   ResultDict = {}
   for i in CompressedSentences:
