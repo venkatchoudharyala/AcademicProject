@@ -1,6 +1,5 @@
 import streamlit as st
 from WebComponents import BootLoader as bl
-from nltk.parse.corenlp import CoreNLPServer
 import os
 import nltk
 
