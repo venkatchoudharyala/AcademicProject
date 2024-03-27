@@ -3,6 +3,7 @@ import zipfile
 import os
 from nltk.parse.corenlp import CoreNLPServer
 import streamlit as st
+import nltk
 
 def Booting():
 	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
