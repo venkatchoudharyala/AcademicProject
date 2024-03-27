@@ -132,7 +132,7 @@ def Generate(Article):
   nltk.download()
   cleaned_article = re.sub(r'\([^)]*\)', '', Article)
 
-  os.environ['CLASSPATH'] = 'stanford-corenlp-4.5.6'
+  os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
 
   #TFdict = TF(Article)
 
