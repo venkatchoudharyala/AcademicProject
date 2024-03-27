@@ -3,6 +3,7 @@ from WebComponents import BootLoader as bl
 
 st.set_page_config(layout="centered")
 def main():
+	st.title("Abstract Page")
 	with st.spinner("Checking for necessary Dependencies"):
 		bl.Booting()
 	if st.button("Upload Text"):
