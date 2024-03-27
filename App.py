@@ -1,5 +1,5 @@
 import streamlit as st
-import image_to_text as ocr
+from WebComponents import ArticleExtractor as ocr
 
 from streamlit_cropper import st_cropper
 from PIL import Image
