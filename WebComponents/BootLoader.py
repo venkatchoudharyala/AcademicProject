@@ -11,6 +11,8 @@ def Booting():
 		ParserDownload()
 
 def ParserDownload():
+	nltk.download('punkt')
+	nltk.download('stopwords')
 	url = "https://nlp.stanford.edu/software/stanford-corenlp-4.5.6.zip"
 	
 	filename = "stanford-corenlp-4.5.6.zip"
