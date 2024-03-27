@@ -4,3 +4,4 @@ easyocr
 textacy
 graphviz
 regex
+nltk
