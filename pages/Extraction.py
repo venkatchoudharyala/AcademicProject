@@ -45,6 +45,7 @@ def main():
 				with col1:
 					if st.form_submit_button("Reset"):
 						k = 0
+						st.rerun()
 						#st.session_state['Questions'].append({"Question": Question})
 				with col2:
 					if st.form_submit_button("Generate HL"):
