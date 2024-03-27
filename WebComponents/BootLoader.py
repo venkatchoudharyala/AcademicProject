@@ -6,7 +6,7 @@ def Booting():
 	directory_path = "Parser"
 	
 	if os.path.exists(directory_path) and os.listdir(directory_path):
-		print("Parser is up and Running")
+		print("Parser is up")
 	else:
 		ParserDownload()
 
@@ -30,5 +30,14 @@ def ParserDownload():
 		with zipfile.ZipFile(os.path.join(directory, filename), 'r') as zip_ref:
 			zip_ref.extractall(directory)
 			print("Extraction successful.")
+			print("Attempting to Start the server")
+			Server()
 	else:
 		print("Failed to download file.")
+
+def Server():
+	st.session_state['server'] = CoreNLPServer()
+	with st.spinner("Initializing CoreNLP Server!"):
+		st.session_state['server'].start()
+		st.success('Server Initialized', icon="✅")
+	print("Server up and running")
