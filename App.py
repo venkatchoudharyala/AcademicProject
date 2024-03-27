@@ -27,14 +27,17 @@ def main():
 	with tab2:
 		Image_File = st.file_uploader("Upload the Image", type=['png', 'jpg'])
 		if Image_File:
-			img = Image.open(Image_File)
-			cropped_img = st_cropper(img, realtime_update = True, box_color = "#FF0012", aspect_ratio = (5, 2))
-			
-			st.write("Preview")
-			_ = cropped_img.thumbnail((580, 580))
-			st.image(cropped_img)
-			#if st.button("Extract"):
-			ExText = ocr.ocr_with_tesseract(cropped_img)
+			col1, col2 = st.columns(2)
+			with col1:
+				img = Image.open(Image_File)
+				cropped_img = st_cropper(img, realtime_update = True, box_color = "#FF0012", aspect_ratio = (5, 2))
+
+			with col2:
+				st.write("Preview")
+				_ = cropped_img.thumbnail((580, 580))
+				st.image(cropped_img)
+				#if st.button("Extract"):
+				ExText = ocr.ocr_with_tesseract(cropped_img)
 			with st.form("OCR", clear_on_submit = True):
 				Question = st.text_area("Question", value = ExText)
 				col1, col2 = st.columns(2)
