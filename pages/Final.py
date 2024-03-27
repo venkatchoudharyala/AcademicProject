@@ -1,6 +1,5 @@
 import streamlit as st
 from CompleteSystemProto import Generate
-import nltk
 
 def main():
 	if 'Questions' in st.session_state:
