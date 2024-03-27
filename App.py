@@ -19,6 +19,7 @@ def main():
 	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
 	st.session_state['server'] = CoreNLPServer()
 	with st.spinner("Initializing CoreNLP Server!"):
+		st.session_state['server'].start()
 		st.success('Server Inintialized', icon="✅")
 
 	if st.button("Upload Text"):
