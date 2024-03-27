@@ -1,12 +1,15 @@
 import requests
 import zipfile
 import os
+from nltk.parse.corenlp import CoreNLPServer
+import streamlit as st
 
 def Booting():
 	directory_path = "Parser"
 	
 	if os.path.exists(directory_path) and os.listdir(directory_path):
-		print("Parser is up")
+		st.success("Files Found", icon="✅")
+		
 	else:
 		ParserDownload()
 	
