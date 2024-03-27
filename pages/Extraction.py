@@ -21,7 +21,7 @@ def main():
 					#st.session_state['Questions'].append({"QuestionID": ID, "Question": Question})
 			with col2:
 				if st.form_submit_button("Generate HL"):
-					st.session_state['Question'].append(Question)
+					st.session_state['Questions'].append(Question)
 					st.switch_page("pages/Final.py")
 	with tab2:
 		if "file_uploader_key" not in st.session_state:
