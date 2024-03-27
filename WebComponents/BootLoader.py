@@ -9,6 +9,9 @@ def Booting():
 		print("Parser is up")
 	else:
 		ParserDownload()
+	
+	print("Attempting to Start the server")
+	Server()
 
 def ParserDownload():
 	nltk.download('punkt')
@@ -30,8 +33,6 @@ def ParserDownload():
 		with zipfile.ZipFile(os.path.join(directory, filename), 'r') as zip_ref:
 			zip_ref.extractall(directory)
 			print("Extraction successful.")
-			print("Attempting to Start the server")
-			Server()
 	else:
 		print("Failed to download file.")
 
