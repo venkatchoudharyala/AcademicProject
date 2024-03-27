@@ -7,7 +7,7 @@ def main():
 	st.title("Abstract Page")
 	with st.spinner("Checking for necessary Dependencies"):
 		bl.Booting()
-	k = os.listdir("Parser")
+	k = os.listdir("Parser/stanford-corenlp-4.5.6")
 	for i in k:
 		st.write(i)
 	if st.button("Upload Text"):
