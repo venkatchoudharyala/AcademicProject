@@ -6,6 +6,7 @@ import nltk
 
 def main():
 	nltk.download('punkt')
+	nltk.download('stopwords')
 	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
 	os.environ['JAVAHOME'] = 'usr/bin/java'
 	st.title("Abstract Page")
