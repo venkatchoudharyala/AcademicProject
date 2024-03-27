@@ -6,7 +6,7 @@ import streamlit as st
 
 def Booting():
 	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
-	directory_path = "Parser"
+	directory_path = "Parser/stanford-corenlp-4.5.6"
 	
 	if os.path.exists(directory_path) and os.listdir(directory_path):
 		st.success("Files Found", icon="✅")
