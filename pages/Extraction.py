@@ -26,7 +26,9 @@ def main():
 					#st.session_state['Flag'] = True
 					#st.switch_page(st.session_state['Path'])
 	with tab2:
-		Image_File = st.file_uploader("Upload the Image", type=['png', 'jpg'])
+		if "file_uploader_key" not in st.session_state:
+			st.session_state["file_uploader_key"] = 0
+		Image_File = st.file_uploader("Upload the Image", type=['png', 'jpg'], accept_multiple_files=True, key=st.session_state["file_uploader_key"],)
 		if Image_File:
 			col1, col2 = st.columns(2)
 			with col1:
@@ -44,7 +46,7 @@ def main():
 				col1, col2 = st.columns(2)
 				with col1:
 					if st.form_submit_button("Reset"):
-						k = 0
+						st.session_state["file_uploader_key"] += 1
 						st.rerun()
 						#st.session_state['Questions'].append({"Question": Question})
 				with col2:
