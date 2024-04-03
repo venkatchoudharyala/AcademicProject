@@ -46,6 +46,6 @@ def Server():
 	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
 	st.session_state['server'] = CoreNLPServer()
 	with st.spinner("Initializing CoreNLP Server!"):
-		st.session_state['server'].start()
+		st.session_state['Server'].start()
 		st.success('Server Initialized', icon="✅")
 	print("Server up and running")
