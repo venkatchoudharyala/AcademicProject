@@ -129,7 +129,6 @@ def SGRMatching(HeadLine, TopPhrases):
     return -1
 
 def Generate(Article):
-  nltk.download()
   cleaned_article = re.sub(r'\([^)]*\)', '', Article)
 
   #TFdict = TF(Article)
