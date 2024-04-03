@@ -36,12 +36,7 @@ def TF(text):
   return TFdict
 
 def KeyPhraseSGRank(Article):
-  try:
-    en = spacy.load("en_core_web_sm")
-  except IOError:
-    spacy.cli.download("en_core_web_sm")
-    spacy.cli.link("en_core_web_sm", "en", force=True)
-    nlp = spacy.load("en_core_web_sm")
+  en = spacy.load("en_core_web_sm")
 
   doc = textacy.make_spacy_doc(Article, lang=en)
 
