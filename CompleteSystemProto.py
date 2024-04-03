@@ -129,6 +129,7 @@ def SGRMatching(HeadLine, TopPhrases):
     return -1
 
 def Generate(Article):
+  st.write("Started")
   cleaned_article = re.sub(r'\([^)]*\)', '', Article)
 
   #TFdict = TF(Article)
