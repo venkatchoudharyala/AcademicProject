@@ -3,3 +3,4 @@ pytesseract
 textacy
 regex
 nltk
+spacy
