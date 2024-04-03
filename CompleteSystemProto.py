@@ -1,4 +1,5 @@
 import streamlit as st
+import spacy
 import numpy as np
 import pandas as pd
 import math
@@ -35,7 +36,7 @@ def TF(text):
   return TFdict
 
 def KeyPhraseSGRank(Article):
-  en = textacy.load_spacy_lang("en_core_web_sm")
+  en = spacy.load("en_core_web_sm")
 
   doc = textacy.make_spacy_doc(Article, lang=en)
 
