@@ -1,7 +1,5 @@
 streamlit-cropper
 pytesseract
-easyocr
 textacy
-graphviz
 regex
 nltk
