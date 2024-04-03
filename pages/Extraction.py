@@ -49,7 +49,7 @@ def main():
 						#st.session_state['Questions'].append({"Question": Question})
 				with col2:
 					if st.form_submit_button("Generate HL"):
-						st.session_state['Questios'].append(Question)
+						st.session_state['Questions'].append(Question)
 						st.switch_page("pages/Final.py")
 if __name__ == "__main__":
 	main()
