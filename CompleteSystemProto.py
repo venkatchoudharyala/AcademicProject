@@ -135,9 +135,11 @@ def Generate(Article):
   #TFdict = TF(Article)
 
   KeyPhrases = KeyPhraseSGRank(Article)
+  print("Key Phrases extracted")
 
 
   first_sentences_list = get_first_sentences(cleaned_article)
+  print("First sentences extracted")
 
   CompressedSentences = []
   #server = CoreNLPServer()
@@ -166,6 +168,7 @@ def Generate(Article):
 
     sentence = ' '.join(word_list)
     CompressedSentences.append(sentence)
+    print("Compresses Sentences Completed")
   #server.stop()
 
   ResultDict = {}
