@@ -44,7 +44,7 @@ def ParserDownload():
 
 def Server():
 	os.environ['CLASSPATH'] = 'Parser/stanford-corenlp-4.5.6'
-	st.session_state['server'] = CoreNLPServer()
+	st.session_state['Server'] = CoreNLPServer()
 	with st.spinner("Initializing CoreNLP Server!"):
 		st.session_state['Server'].start()
 		st.success('Server Initialized', icon="✅")
