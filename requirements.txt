@@ -3,4 +3,4 @@ pytesseract
 textacy
 regex
 nltk
-spacy
+spacy-download
