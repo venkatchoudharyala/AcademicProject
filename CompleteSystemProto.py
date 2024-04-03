@@ -36,7 +36,7 @@ def TF(text):
   return TFdict
 
 def KeyPhraseSGRank(Article):
-  nlp = load_spacy("en_core_web_sm", exclude=["parser", "tagger"])  
+  en = load_spacy("en_core_web_sm", exclude=["parser", "tagger"])  
 
   doc = textacy.make_spacy_doc(Article, lang=en)
 
@@ -56,7 +56,7 @@ def get_first_sentences(news_article):
     return first_sentences
 
 def Parsing(Sentence, server):
-  parser = CoreNLPParser(url=st.session_state['server'].url)
+  parser = CoreNLPParser(url=server.url)
   return next(parser.raw_parse(Sentence))
 
 def find_leftmost_S(tree):
@@ -147,7 +147,7 @@ def Generate(Article):
   #server.start()
 
   for i in first_sentences_list:
-    ParsedSentence = Parsing(i, server)
+    ParsedSentence = Parsing(i, st.session_state['Server'])
     for i in ParsedSentence:
       for j in i:
         lefts = find_leftmost_S(j)
