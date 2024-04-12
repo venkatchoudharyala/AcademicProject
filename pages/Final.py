@@ -5,7 +5,10 @@ def main():
 	if 'Questions' in st.session_state:
 		with st.spinner("Generating Head Line!!!"):
 			st.subheader(st.session_state['Questions'][-1])
-			st.success(Generate(st.session_state['Questions'][-1], st.session_state["Server"]))
+			if 'Server' in st.session_state:
+				st.success(Generate(st.session_state['Questions'][-1], st.session_state["Server"]))
+			else:
+				st.error("Server is not Booted")
 	else:
 		st.error("Please Navigate back to Extraction Page and Upload your Article")
 
