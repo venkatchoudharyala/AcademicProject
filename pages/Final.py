@@ -1,5 +1,5 @@
 import streamlit as st
-from headline_gen import Generate
+from headline_gen.Control import Generate
 
 def main():
 	if 'Questions' in st.session_state:
