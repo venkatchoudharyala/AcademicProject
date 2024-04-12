@@ -3,7 +3,7 @@ pytesseract
 textacy
 regex
 nltk
-scipy
+scipy==1.12.0
 gensim
 networkx
 headline-gen
