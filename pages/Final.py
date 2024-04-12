@@ -1,5 +1,5 @@
 import streamlit as st
-from CompleteSystemProto import Generate
+from headline_gen import Generate
 
 def main():
 	if 'Questions' in st.session_state:
