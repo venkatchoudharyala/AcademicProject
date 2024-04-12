@@ -4,7 +4,7 @@ from headline_gen.Control import Generate
 def main():
 	if 'Questions' in st.session_state:
 		with st.spinner("Generating Head Line!!!"):
-			st.subheader(st.session_state['Questions'][-1])
+			#st.subheader(st.session_state['Questions'][-1])
 			if 'Server' in st.session_state:
 				st.success(Generate(st.session_state['Questions'][-1], st.session_state["Server"]))
 			else:
