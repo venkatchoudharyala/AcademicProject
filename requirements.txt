@@ -3,4 +3,6 @@ pytesseract
 textacy
 regex
 nltk
+gensim
+networkx
 headline-gen
